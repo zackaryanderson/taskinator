@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "FlightManager",
+    "slug": "flightmanager",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0F1E"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.flightmanager.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Used to detect your nearest airport.",
+        "UIBackgroundModes": ["fetch", "remote-notification"]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0A0F1E"
+      },
+      "package": "com.flightmanager.app",
+      "permissions": ["RECEIVE_BOOT_COMPLETED", "VIBRATE"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#0A84FF",
+          "sounds": []
+        }
+      ]
+    ],
+    "extra": {
+      "aviationstackApiKey": "YOUR_AVIATIONSTACK_API_KEY"
+    }
+  }
+}
